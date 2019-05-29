@@ -23,7 +23,7 @@ func encoder() {
 	}
 	dataForEncode := []byte(plainText)
 	encodeString := base64.StdEncoding.EncodeToString(dataForEncode)
-	fmt.Println("result: ", encodeString)
+	fmt.Println("result:", encodeString)
 }
 
 func decoder() {
@@ -34,7 +34,7 @@ func decoder() {
 		decodeStringAsPlain = scanner.Text()
 		if len(decodeStringAsPlain) == 0 {
 			fmt.Println("Empty character is not allowed. Enter character.")
-			fmt.Print("enter decode string: ")
+			fmt.Print("enter decode string:")
 			continue
 		} else {
 			break
@@ -45,12 +45,12 @@ func decoder() {
 		fmt.Println("error", err)
 		return
 	}
-	fmt.Println("result: ", string(decodeStringAsByte))
+	fmt.Println("result:", string(decodeStringAsByte))
 }
 
 func main() {
 	fmt.Println("base64 encoder/decoder tool")
-	fmt.Print("Do you want to encode, or decode? Please enter: e/d: ")
+	fmt.Print("Do you want to encode, or decode? Please enter: e/d:")
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		options := scanner.Text()
@@ -61,7 +61,7 @@ func main() {
 			decoder()
 			break
 		} else {
-			fmt.Println("Please enter: e/d")
+			fmt.Print("Please enter: e/d:")
 			continue
 		}
 	}
