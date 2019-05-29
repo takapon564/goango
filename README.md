@@ -11,11 +11,11 @@ $ cd goango
 ```
 ### Execute program  
 ```
-go run main.go
+$ go run main.go
 ```  
 or  
 ```
-./goango
+$ ./goango
 ```  
 ### Select encode/decode  
 ```
@@ -25,7 +25,7 @@ Do you want to encode, or decode? Please enter: e/d: e
 ```
 enter plain text: password
 ```  
-### You can get eocoded text.  
+### You can get eocoded text  
 ```
 result:  cGFzc3dvcmQ=
 ```
